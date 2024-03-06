@@ -145,6 +145,9 @@ func searchPostRequestParams(query string, request *SearchRequest) map[string]in
 	if request.Vector != nil && len(request.Vector) > 0 {
 		params["vector"] = request.Vector
 	}
+	if request.Hybrid != nil {
+		params["hybrid"] = request.Hybrid
+	}
 
 	return params
 }
